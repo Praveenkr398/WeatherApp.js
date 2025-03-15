@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100dvh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.603) 50%, rgba(241, 241, 247, 0.488) 50%);
+    background-image: url(india.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   
+}
+
+body>h1{
+    font-size:2.3rem;
+    margin: 2rem;
+    color: white;
+    font-family: "Poppins", sans-serif;
+
+}
+
+main{
+    font-family: "Poppins", sans-serif;
+    width: 350px;
+    background-color:white;
+    border: 3px solid rgb(248, 241, 241);
+    min-height:50vh;
+    height: fit-content;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px gray;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid rgb(235, 231, 231);
+    border-radius: 30px;
+}
+form input{
+    width: 100%;
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+
+form input,
+form button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 10px 5px;
+}
+
+.result {
+    padding-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.result .name{
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.result .name img{
+    width: 30px;
+}
+
+.result .name figcaption{
+    font-size: 22px;
+}
+
+.temperature img{
+    width: 100px;
+    filter: drop-shadow(-10px -10px 30px #ffdd00);
+}
+
+.temperature figcaption{
+    font-size: 3rem;
+display: flex;
+justify-content: center;
+}
+.temperature sup{
+    margin-left: -5px;}
+
+.description{
+    padding: 5px 0px;
+}
+.time{
+    padding: 5px 0px;
+}
+
+main ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+main li{
+    color: white;
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.23) 50%);
+    font-weight: 500;
+    font-size:small;
+}
+
+main li i{
+    font-size: 2rem;
+    display: block !important;
+    margin: 20px 0;
+}
+
+main li:nth-child(1){
+    filter: drop-shadow(-1px -1px 10px #57ddf2);
+    animation: wave 1s   infinite alternate ;
+    position: relative;
+    background-color: rgb(129, 224, 255);
+}
+main li:nth-child(2){
+    background-color: rgb(69, 247, 78);
+    filter: drop-shadow(-1px -1px 10px #99ef19);
+    animation: wave 1.1s   infinite alternate ;
+    position: relative;
+
+}
+
+main li:nth-child(3){
+    background-color: rgb(237, 152, 32);
+    filter: drop-shadow(-1px -1px 10px #fcb724);
+    animation: wave 1s   infinite alternate ;
+    position: relative;
+
+}
+
+main li span:nth-child(1){
+    color: black;    
+}
+
+.fa-cloud {
+    color:  rgb(119, 221, 255); 
+    filter: drop-shadow(-1px -1px 10px   rgb(137, 137, 137));
+    animation: drop 1.1s   infinite alternate ;
+    position: relative;
+}
+
+.fa-droplet {
+    color:  rgb(86, 255, 95);
+    filter: drop-shadow(-1px -1px 10px   rgb(137, 137, 137));
+    animation: drop 1s   infinite alternate ;
+    position: relative;
+}
+
+.fa-gauge {
+    color:  rgb(255, 173, 91);
+    filter: drop-shadow(-1px -1px 10px   rgb(137, 137, 137));
+    animation: drop 1.1s   infinite alternate ;
+    position: relative;
+}
+@keyframes drop {
+    0%{
+       
+        top: 10px;
+    }
+    100%{
+       color: white;
+        top: 0px;
+    }
+}
+
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translatey(5px);
+    }
+}
+
+#CityLogo{
+    font-size: 20px;
+    animation: city 1.1s 2 alternate ;
+    position: relative;
+    backdrop-filter: 3px 2px 30px gray;
+}
+
+@keyframes city {
+    0%{
+       left: 0px;
+        transform: rotate(0deg);
+    }
+    100%{
+        left: -120px;
+      transform: rotate(360deg);
+    }
+}
+
+main.error{
+    animation: errorEffect 0.3s linear 1;
+}
+
+@keyframes errorEffect  {
+    0%{
+     transform: translate(10px, 5px);   
+    }
+    25%{
+transform: translate(-5px, 0);
+    }
+    50%{
+transform: translate(8px , 2px);
+    }
+   75%{
+transform: translate(-2px , 5px);
+    }
+    100%{
+transform: translate(0, 0);
+    }
+}
