@@ -5,6 +5,8 @@
 ### 🚀 Live Demo: [Weather App](https://praveenkr398.github.io/WeatherApp.js/)  
 ### 💻 Source Code: [GitHub Repository](https://github.com/Praveenkr398/WeatherApp.js)  
 
+Category:- "Mini Project, HTML, CSS, JavaScript, Api, Top"
+
 ---
 
 ## **📌 Project Overview**  
